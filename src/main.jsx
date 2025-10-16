@@ -10,11 +10,6 @@ import AboutPage from './pages/About.jsx'
 import AuthPage from './pages/Auth.jsx'          // ← if Auth.jsx is in /pages
 // import AuthPage from './Auth.jsx'             // ← use this line if Auth.jsx is NOT in /pages
 
-import ProfilePage from './pages/Profile.jsx'     // ← if Profile.jsx is in /pages
-// import ProfilePage from './Profile.jsx'        // ← use this if Profile.jsx is at project root
-import WorkstationPage from './pages/Workstation.jsx';  // NEW
-
-import AgentNode from './pages/AgentNodes.jsx';
 
 import './styles.css'
 
@@ -44,13 +39,6 @@ function Router() {
     return <AuthPage defaultMode={defaultMode} />
   }
 
-  if (pathname === '/workstation' || pathname.startsWith('/workstation/')) {
-    return <WorkstationPage />;
-  }
-
-  if (pathname === '/agentnodes' || pathname.startsWith('/agentnodes/')) {
-    return <AgentNode/>;
-  }
 
   // Home
   return <App />
